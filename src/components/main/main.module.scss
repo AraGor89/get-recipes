@@ -1,5 +1,20 @@
 .mainContainer {
   color: green;
   min-height: 500px;
-  background-color: purple;
+  .listsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+  }
+  .searchContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 30px;
+    input,
+    button {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
 }

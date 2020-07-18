@@ -1,11 +1,20 @@
 import React from "react";
 import style from "./navBar.module.scss";
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import { loginSubmitAC } from "./../../redux/reducers/authReducer";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const handleLogout = () => {
+    props.loginSubmitAC(false);
+  };
   return (
     <div className={style.navBarContainer}>
-      <Navigation link="/login" content="Login" />
+      {props.initialized ? (
+        <span onClick={handleLogout}>Log out</span>
+      ) : (
+        <Navigation link="/login" content="Login" />
+      )}
       <Navigation link="/main" content="Main" />
       <Navigation link="/ownRecipe" content="Own recipe" />
     </div>
@@ -22,4 +31,8 @@ const Navigation = (props) => {
   );
 };
 
-export default NavBar;
+const mapStateToProps = (state) => ({
+  initialized: state.authReducer.initialized,
+});
+
+export default connect(mapStateToProps, { loginSubmitAC })(NavBar);

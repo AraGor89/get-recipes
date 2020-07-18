@@ -1,3 +1,13 @@
 .navBarContainer {
   color: yellowgreen;
+  min-height: 50px;
+  font-size: 25px;
+  padding-top: 25px;
+  .navItem {
+    display: inline;
+    margin-left: 15px;
+    .activeLink {
+      color: red;
+    }
+  }
 }
