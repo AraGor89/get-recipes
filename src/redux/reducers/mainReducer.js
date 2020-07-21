@@ -3,7 +3,7 @@ import { recipeApi } from "./../../api/edamamAPI";
 const initialState = {
   count: 0,
   fromItem: 0,
-  setMealResultArray: [],
+  mealResultArray: [],
   moreResults: true,
   mealName: "",
   toItem: 10,
@@ -55,7 +55,7 @@ const SET_INCOMING_DATA = "SET_INCOMING_DATA";
 const setIncomingAC = (
   count,
   fromItem,
-  setMealResultArray,
+  mealResultArray,
   moreResults,
   toItem
 ) => ({
@@ -63,7 +63,7 @@ const setIncomingAC = (
   payload: {
     count,
     fromItem,
-    setMealResultArray,
+    mealResultArray,
     moreResults,
     toItem,
   },
