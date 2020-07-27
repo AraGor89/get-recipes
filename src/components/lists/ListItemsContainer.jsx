@@ -18,16 +18,22 @@ const ListItemsContainer = (props) => {
         <img src={image} alt="mealImage" />
       </div>
       <div className={styles.mealIngredientsContainer}>
-        <p>name:{label}</p>
-        <p>calories:{calories}</p>
-        <p>total weight:{totalWeight}</p>
+        <h2> {label}</h2>
+        <hr />
+        <p>
+          <strong>calories:</strong> {calories}
+        </p>
+        <p>
+          {" "}
+          <strong>weight:</strong> {totalWeight}
+        </p>
         {toggle && (
           <div>
             <a href={shareAs} target="blank">
               More detailed information
             </a>
             <br />
-            ingredientLines
+            <strong> ingredients</strong>
             {ingredientLines.map((ingredient) => (
               <ul key={uuidv4()}>
                 <li>{ingredient}</li>
@@ -35,6 +41,7 @@ const ListItemsContainer = (props) => {
             ))}
           </div>
         )}
+        <hr />
         <button onClick={() => setToggle(!toggle)}>
           {toggle ? "hide" : "show"} details
         </button>

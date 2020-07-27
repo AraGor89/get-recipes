@@ -1,28 +1,47 @@
-// .listsContainer {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   margin: 10px;
-// }
-
-// .listItemsContainer {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   margin: 10px;
-// }
-
 .listsContainer {
   margin-top: 10px;
   width: 100%;
+  .listItemsContainer {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    .mealImageContainer {
+      box-sizing: border-box;
+    }
+    .mealIngredientsContainer {
+      box-sizing: border-box;
+      width: 100%;
+      h2 {
+        color: #db1b1b;
+      }
+      a {
+        text-decoration: none;
+        color: green;
+      }
+      button {
+        width: 150px;
+        height: 45px;
+        background-color: #db1b1b;
+        border-radius: 5px;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        border: none;
+      }
+    }
+  }
 }
-.listItemsContainer {
-  width: 100%;
-  display: flex;
+.listsContainer > div:nth-child(even) {
+  flex-direction: row-reverse;
+  .mealImageContainer {
+    margin-left: 20%;
+  }
+  .mealIngredientsContainer {
+    width: 100%;
+  }
 }
-.mealImageContainer {
-  box-sizing: border-box;
-  margin-left: 10%;
-}
-.mealIngredientsContainer {
-  box-sizing: border-box;
-  margin-left: 10%;
+.listsContainer > div:nth-child(odd) {
+  .mealImageContainer {
+    margin-right: 20%;
+  }
 }

@@ -66,7 +66,7 @@ const Auth = (props) => {
           </button>
         </div>
         <div className={style.logImageContainer}>
-          <img src={logImage} alt="logImage" />
+          <img src={logImage} alt="logImage" className={style.authImage} />
           <p className={style.centeredText}>Welcome Back</p>
         </div>
       </div>
