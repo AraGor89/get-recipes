@@ -3,6 +3,7 @@ import style from "./navBar.module.scss";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { loginSubmitAC } from "./../../redux/reducers/authReducer";
+import Search from "./../search/Search";
 
 const NavBar = (props) => {
   const handleLogout = () => {
@@ -10,13 +11,18 @@ const NavBar = (props) => {
   };
   return (
     <div className={style.navBarContainer}>
-      {props.initialized ? (
-        <span onClick={handleLogout}>Log out</span>
-      ) : (
-        <Navigation link="/login" content="Login" />
-      )}
-      <Navigation link="/main" content="Main" />
-      <Navigation link="/ownRecipe" content="Own recipe" />
+      <div className={style.logoContainer}>LOGO</div>
+      <div className={style.menuContainer}>
+        <Navigation link="/main" content="Main" />
+        <Navigation link="/ownRecipe" content="Own recipe" />
+        {props.initialized ? (
+          <span onClick={handleLogout} className={style.navItem}>
+            Log out
+          </span>
+        ) : (
+          <Navigation link="/login" content="Login" />
+        )}
+      </div>
     </div>
   );
 };

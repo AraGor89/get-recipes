@@ -1,5 +1,12 @@
 .App {
-  background-color: yellow;
-  width: 80%;
-  margin: 3% auto;
+  /* background-color: yellow; */
+  width: 62%;
+  margin: 0 auto;
+  font-family: "Roboto";
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url(./assets/Roboto/Roboto-Regular.ttf) format("truetype");
 }

@@ -6,8 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 const Lists = ({ recipes }) => {
   console.log(recipes);
   return (
-    <div>
-      Lists
+    <div className={style.listsContainer}>
       {recipes &&
         recipes.map((recipe) => (
           <ListItemsContainer recipe={recipe.recipe} key={uuidv4()} />

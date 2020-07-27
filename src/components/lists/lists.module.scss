@@ -1,0 +1,28 @@
+// .listsContainer {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   margin: 10px;
+// }
+
+// .listItemsContainer {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   margin: 10px;
+// }
+
+.listsContainer {
+  margin-top: 10px;
+  width: 100%;
+}
+.listItemsContainer {
+  width: 100%;
+  display: flex;
+}
+.mealImageContainer {
+  box-sizing: border-box;
+  margin-left: 10%;
+}
+.mealIngredientsContainer {
+  box-sizing: border-box;
+  margin-left: 10%;
+}

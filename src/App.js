@@ -2,15 +2,15 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Auth from "./components/auth/Auth";
 import Main from "./components/main/Main";
-import NavBar from "./components/navigation/Navbar";
 import OwnRecipe from "./components/own/OwnRecipe";
 import { connect } from "react-redux";
 import "./App.css";
+import Header from "./components/header/Header";
 
 function App(props) {
   return (
     <div className="App">
-      <NavBar />
+      <Header />
       <Switch>
         <Route path="/login" component={() => <Auth />} />
         <Route path="/main" component={() => <Main />} />

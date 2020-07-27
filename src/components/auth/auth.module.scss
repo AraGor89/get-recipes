@@ -1,11 +1,46 @@
 .authContainer {
-  color: red;
-  min-height: 500px;
-  background-color: blue;
-  input {
-    margin: 30px 10px;
-  }
-  div {
-    margin: 30px 10px;
+  width: 100%;
+  background-color: white;
+  margin-top: 25px;
+  .imgInputContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    .inputContainer {
+      margin: 0 auto;
+      margin-top: 5%;
+      input {
+        border: none;
+        outline: none;
+        width: 300px;
+        height: 60px;
+        border-bottom: 1px solid;
+        margin-bottom: 15px;
+      }
+      button {
+        width: 170px;
+        margin-top: 20px;
+        border: none;
+        background-color: #db1b1b;
+        padding: 10px;
+      }
+    }
+    .logImageContainer {
+      position: relative;
+      text-align: center;
+      color: white;
+      .centeredText {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      img {
+        width: 300px;
+        height: 350px;
+      }
+    }
   }
 }

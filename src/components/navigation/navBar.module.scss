@@ -1,13 +1,35 @@
 .navBarContainer {
-  color: yellowgreen;
-  min-height: 50px;
-  font-size: 25px;
-  padding-top: 25px;
-  .navItem {
-    display: inline;
-    margin-left: 15px;
-    .activeLink {
-      color: red;
+  //min-height: 500px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  //background-image: url("../../assets/images/Restaurant-Instagram-Photography.png");
+  .logoContainer {
+    color: white;
+    padding: 40px;
+  }
+  .menuContainer {
+    text-align: right;
+    color: white;
+    padding: 40px;
+    .navItem {
+      display: inline;
+      margin-right: 25px;
+      color: white;
+      font-size: 14px;
+      .activeLink {
+        border-bottom: 1px solid white;
+      }
     }
   }
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+  }
 }
+// a {
+//   text-decoration: none;
+//   color: white;
+//   font-size: 14px;
+// }
