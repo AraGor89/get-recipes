@@ -1,9 +1,7 @@
 .navBarContainer {
-  //min-height: 500px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  //background-image: url("../../assets/images/Restaurant-Instagram-Photography.png");
   .logoContainer {
     color: white;
     padding: 40px;
@@ -17,6 +15,7 @@
       margin-right: 25px;
       color: white;
       font-size: 14px;
+      cursor: pointer;
       .activeLink {
         border-bottom: 1px solid white;
       }
@@ -28,8 +27,3 @@
     font-size: 14px;
   }
 }
-// a {
-//   text-decoration: none;
-//   color: white;
-//   font-size: 14px;
-// }

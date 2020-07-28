@@ -8,9 +8,8 @@ const OwnRecipe = (props) => {
   return <div className={style.ownRecipe}>own recipe</div>;
 };
 
-const mapStateToProps = (state) => ({
-  //initialized: state.authReducer.initialized,
-});
+const mapStateToProps = (state) => ({});
+
 export default compose(
   connect(mapStateToProps, {}),
   withAuthRedirect

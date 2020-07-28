@@ -1,0 +1,14 @@
+.paginationContainer {
+  width: 95.5%;
+  padding: 30px;
+  text-align: center;
+  .prev {
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .next {
+    font-size: 20px;
+    cursor: pointer;
+  }
+}

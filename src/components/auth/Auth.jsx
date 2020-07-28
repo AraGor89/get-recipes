@@ -1,41 +1,47 @@
 import React, { useEffect } from "react";
-import style from "./auth.module.scss";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { validateLogin } from "./../validation/validation";
+import style from "./auth.module.scss";
 import logImage from "../../assets/images/logImage.jpg";
+import Warning from "./Warning";
+
 import {
   loginAC,
   passwordAC,
   loginSubmitAC,
   incrementFalseAttemptsAC,
 } from "../../redux/reducers/authReducer";
-const Auth = (props) => {
+const Auth = ({
+  falseAttemptsCount,
+  initialized,
+  loginAC,
+  passwordAC,
+  login,
+  password,
+  loginSubmitAC,
+  incrementFalseAttemptsAC,
+}) => {
   useEffect(() => {
-    if (props.falseAttemptsCount === 3) {
+    if (falseAttemptsCount === 1) {
       setTimeout(() => {
         window.location.reload();
       }, 3000);
     }
-  }, [props.falseAttemptsCount]);
-  if (props.initialized) {
+  }, [falseAttemptsCount]);
+  if (initialized) {
     return <Redirect to={"/main"} />;
   }
   const handleLoginChange = (e) => {
-    props.loginAC(e.target.value);
+    loginAC(e.target.value);
   };
   const handlePasswordChange = (e) => {
-    props.passwordAC(e.target.value);
+    passwordAC(e.target.value);
   };
   const handleLoginSubmit = () => {
-    validateLogin(
-      props.login,
-      props.password,
-      props.loginSubmitAC,
-      props.incrementFalseAttemptsAC
-    );
-    props.loginAC("");
-    props.passwordAC("");
+    validateLogin(login, password, loginSubmitAC, incrementFalseAttemptsAC);
+    loginAC("");
+    passwordAC("");
   };
 
   return (
@@ -46,21 +52,22 @@ const Auth = (props) => {
           <p>Bon appetit</p>
           <input
             type="text"
-            value={props.login}
+            value={login}
             onChange={handleLoginChange}
             placeholder="login"
           />
           <br />
           <input
             type="password"
-            value={props.password}
+            value={password}
             onChange={handlePasswordChange}
             placeholder="password"
           />{" "}
           <br />
+          <div>{falseAttemptsCount === 1 && <Warning />}</div>
           <button
             onClick={handleLoginSubmit}
-            disabled={props.falseAttemptsCount === 3}
+            disabled={falseAttemptsCount === 1}
           >
             Log in
           </button>
@@ -69,9 +76,6 @@ const Auth = (props) => {
           <img src={logImage} alt="logImage" className={style.authImage} />
           <p className={style.centeredText}>Welcome Back</p>
         </div>
-      </div>
-      <div>
-        {props.falseAttemptsCount === 3 && <h1>WRONG LOGIN OR PASSWORD</h1>}
       </div>
     </div>
   );
@@ -89,6 +93,3 @@ export default connect(mapStateToProps, {
   loginSubmitAC,
   incrementFalseAttemptsAC,
 })(Auth);
-
-///http://www.recipepuppy.com/about/api/
-///http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3

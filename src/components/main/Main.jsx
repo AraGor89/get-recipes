@@ -4,25 +4,25 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { withAuthRedirect } from "../../hoc/authorization/authorization";
 import Lists from "./../lists/Lists";
-import {
-  mealNameChangeAC,
-  getRecipesTHUNK,
-} from "./../../redux/reducers/mainReducer";
+import { getRecipesTHUNK } from "./../../redux/reducers/mainReducer";
+import NoResult from "./../noResult/NoResult";
+import Loading from "./../loading/Loading";
 
-const Main = (props) => {
+const Main = ({ count, isFetching }) => {
+  if (count === 0) return <NoResult />;
   return (
     <div className={style.mainContainer}>
-      <Lists recipes={props.mealResultArray} />
+      {isFetching ? <Loading /> : <Lists />}
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
-  mealName: state.mainReducer.mealName,
-  mealResultArray: state.mainReducer.mealResultArray,
+  isFetching: state.mainReducer.isFetching,
+  count: state.mainReducer.count,
 });
 
 export default compose(
-  connect(mapStateToProps, { mealNameChangeAC, getRecipesTHUNK }),
+  connect(mapStateToProps, { getRecipesTHUNK }),
   withAuthRedirect
 )(Main);

@@ -1,7 +1,7 @@
 import { recipeApi } from "./../../api/edamamAPI";
 
 const initialState = {
-  count: 0,
+  count: null,
   fromItem: 0,
   mealResultArray: [],
   moreResults: true,
@@ -69,13 +69,13 @@ const setIncomingAC = (
   },
 });
 
-//const GET_RECIPES = "GET_RECIPES";
-export const getRecipesTHUNK = () => (dispatch, getState) => {
+export const getRecipesTHUNK = (from, to) => (dispatch, getState) => {
   let mealName = getState().mainReducer.mealName;
   dispatch(isFetchingAC(true));
   recipeApi
-    .getRecipe(mealName, 0, 10)
+    .getRecipe(mealName, from, to)
     .then((response) => {
+      console.log(response.data);
       let { count, from, hits, more, to } = response.data;
       dispatch(setIncomingAC(count, from, hits, more, to));
       dispatch(isFetchingAC(false));

@@ -1,5 +1,6 @@
 .authContainer {
   width: 100%;
+  min-height: 500px;
   background-color: white;
   margin-top: 25px;
   .imgInputContainer {
@@ -25,6 +26,7 @@
         border: none;
         background-color: #db1b1b;
         padding: 10px;
+        color: white;
       }
     }
     .logImageContainer {
@@ -43,4 +45,12 @@
       }
     }
   }
+}
+
+.warningContainer {
+  border: 2px solid red;
+  color: red;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
 }
