@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/get-recipes/static/css/main.30ef48b0.chunk.css",
-    "main.js": "/get-recipes/static/js/main.02cf4326.chunk.js",
-    "main.js.map": "/get-recipes/static/js/main.02cf4326.chunk.js.map",
+    "main.css": "/get-recipes/static/css/main.c8652596.chunk.css",
+    "main.js": "/get-recipes/static/js/main.2ea4dd41.chunk.js",
+    "main.js.map": "/get-recipes/static/js/main.2ea4dd41.chunk.js.map",
     "runtime-main.js": "/get-recipes/static/js/runtime-main.ec81625d.js",
     "runtime-main.js.map": "/get-recipes/static/js/runtime-main.ec81625d.js.map",
-    "static/js/2.d83a3aad.chunk.js": "/get-recipes/static/js/2.d83a3aad.chunk.js",
-    "static/js/2.d83a3aad.chunk.js.map": "/get-recipes/static/js/2.d83a3aad.chunk.js.map",
+    "static/js/2.9f504c42.chunk.js": "/get-recipes/static/js/2.9f504c42.chunk.js",
+    "static/js/2.9f504c42.chunk.js.map": "/get-recipes/static/js/2.9f504c42.chunk.js.map",
     "index.html": "/get-recipes/index.html",
-    "precache-manifest.d79d39202b9f50c3b3df81b04d0412b9.js": "/get-recipes/precache-manifest.d79d39202b9f50c3b3df81b04d0412b9.js",
+    "precache-manifest.fe917b164bb8d3af7601f06120c21aca.js": "/get-recipes/precache-manifest.fe917b164bb8d3af7601f06120c21aca.js",
     "service-worker.js": "/get-recipes/service-worker.js",
-    "static/css/main.30ef48b0.chunk.css.map": "/get-recipes/static/css/main.30ef48b0.chunk.css.map",
-    "static/js/2.d83a3aad.chunk.js.LICENSE.txt": "/get-recipes/static/js/2.d83a3aad.chunk.js.LICENSE.txt",
-    "static/media/header.module.scss": "/get-recipes/static/media/Restaurant-Instagram-Photography.2b9a0f00.png",
+    "static/css/main.c8652596.chunk.css.map": "/get-recipes/static/css/main.c8652596.chunk.css.map",
+    "static/js/2.9f504c42.chunk.js.LICENSE.txt": "/get-recipes/static/js/2.9f504c42.chunk.js.LICENSE.txt",
+    "static/media/header.module.scss": "/get-recipes/static/media/ownPage.6d60503e.jpg",
     "static/media/Roboto-Regular.ttf": "/get-recipes/static/media/Roboto-Regular.11eabca2.ttf",
-    "static/media/logImage.jpg": "/get-recipes/static/media/logImage.4bfe581a.jpg"
+    "static/media/loading.module.scss": "/get-recipes/static/media/hot2.22c5d157.gif",
+    "static/media/logImage.jpg": "/get-recipes/static/media/logImage.4bfe581a.jpg",
+    "static/media/noResult.module.scss": "/get-recipes/static/media/noResult.81d0a9ca.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.ec81625d.js",
-    "static/js/2.d83a3aad.chunk.js",
-    "static/css/main.30ef48b0.chunk.css",
-    "static/js/main.02cf4326.chunk.js"
+    "static/js/2.9f504c42.chunk.js",
+    "static/css/main.c8652596.chunk.css",
+    "static/js/main.2ea4dd41.chunk.js"
   ]
 }
