@@ -10,10 +10,10 @@ const NavBar = ({ loginSubmitAC, initialized }) => {
   };
   return (
     <div className={style.navBarContainer}>
-      <div className={style.logoContainer}>LOGO</div>
+      <div className={style.logoContainer}></div>
       <div className={style.menuContainer}>
         <Navigation link="/main" content="Main" />
-        <Navigation link="/ownRecipe" content="Own recipe" />
+        {/* <Navigation link="/ownRecipe" content="Own recipe" /> */}
         {initialized ? (
           <span onClick={handleLogout} className={style.navItem}>
             Log out

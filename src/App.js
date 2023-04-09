@@ -12,9 +12,9 @@ function App(props) {
     <div className="App">
       {props.initialized ? <Header /> : <Auth />}
       <Switch>
-        {/* <Route path="/login" component={() => <Auth />} /> */}
         <Route path="/main" component={() => <Main />} />
-        <Route path="/ownRecipe" component={() => <OwnRecipe />} />
+        {/* <Route path="/login" component={() => <Auth />} /> */}
+        {/* <Route path="/ownRecipe" component={() => <OwnRecipe />} /> */}
       </Switch>
     </div>
   );

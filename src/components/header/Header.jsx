@@ -16,13 +16,25 @@ const Header = (props) => {
   let location = useLocation().pathname;
   let isOwnRecipeLocation = location === "/ownRecipe";
   let isMainLocation = location === "/main";
+
   return (
     <div className={style.headerContainer}>
       <img src={headerMainimg} alt="headerMainimg" />
       {isMainLocation && <img src={headerMainimg} alt="headerMainimg" />}
       {isOwnRecipeLocation && <img src={headerOwnimg} alt="headerOwnimg" />}
       <NavBar />
-      {!isOwnRecipeLocation && <Search {...props} />}
+      {isMainLocation && (
+        <div
+          style={{
+            position: "absolute",
+            width: "544px",
+            left: "369px",
+            top: "100px",
+          }}
+        >
+          <Search {...props} />
+        </div>
+      )}
     </div>
   );
 };
