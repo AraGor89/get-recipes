@@ -16,11 +16,11 @@
 
 // export default store;
 
-import { configureStore } from '@reduxjs/toolkit'
-import authSlice from '../authSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import authSlice from "../authSlice";
 
 export default configureStore({
   reducer: {
     isAuth: authSlice,
   },
-})
+});
